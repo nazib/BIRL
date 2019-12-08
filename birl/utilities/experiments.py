@@ -19,7 +19,7 @@ import uuid
 import multiprocessing as mproc
 from functools import wraps
 
-import enlighten
+import tqdm
 import numpy as np
 from pathos.multiprocessing import ProcessPool
 
@@ -544,9 +544,8 @@ def iterate_mproc_map(wrap_func, iterate_vals, nb_workers=CPU_COUNT, desc=''):
     nb_workers = CPU_COUNT if nb_workers < 0 else nb_workers
 
     if desc is not None:
-        pbar = enlighten.Counter(total=len(iterate_vals),
-                                 desc=str('%r @%i-threads' % (desc, nb_workers)),
-                                 stream=sys.stderr)
+        pbar = tqdm.tqdm(total=len(iterate_vals),
+                         desc=str('%r @%i-threads' % (desc, nb_workers)))
     else:
         pbar = None
 
