@@ -26,6 +26,7 @@ matrix:
         homebrew:
           # update: true
           packages: python3.6
+      python: '3.6'
       before_install:
         # - brew update && brew install git-lfs
         - pip3 install virtualenv
