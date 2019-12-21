@@ -22,10 +22,10 @@ matrix:
       osx_image: xcode10.3
       language: generic
       env: TOXENV=py37
-      #addons:
-      #  homebrew:
-      #    # update: true
-      #    packages: python3.7
+      addons:
+        homebrew:
+          # update: true
+          packages: python3.7
       before_install:
         # - brew update && brew install git-lfs
         - pip3 install virtualenv
