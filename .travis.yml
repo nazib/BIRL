@@ -19,14 +19,13 @@ language: python
 matrix:
   include:
     - os: osx
-      osx_image: xcode9.4
+      osx_image: xcode10.3
       language: generic
-      env: TOXENV=py36
-      addons:
-        homebrew:
-          # update: true
-          packages: python3.6
-      python: '3.6'
+      env: TOXENV=py37
+      #addons:
+      #  homebrew:
+      #    # update: true
+      #    packages: python3.7
       before_install:
         # - brew update && brew install git-lfs
         - pip3 install virtualenv
