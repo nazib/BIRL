@@ -21,10 +21,7 @@ matrix:
     - os: osx
       osx_image: xcode10.3
       env: TOXENV=py36
-      language: objective_c
-      before_install:
-        - "pyenv install 3.6.8"
-        - "pyenv global 3.6.8"
+      python: 3.6.8
     - os: linux
       python: 2.7
       dist: xenial  # Ubuntu 16.04
