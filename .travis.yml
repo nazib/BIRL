@@ -14,14 +14,14 @@ env:
   global:
     - DISPLAY=""
 
-language: python
-
 matrix:
   include:
     - os: osx
       osx_image: xcode10.3
-      python: 3.7
-      env: TOXENV=py37
+      env: TOXENV=py36
+      before_install:
+        - "pyenv install 3.6"
+        - "pyenv global 3.6"
     - os: linux
       python: 2.7
       dist: xenial  # Ubuntu 16.04
