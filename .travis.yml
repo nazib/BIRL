@@ -19,9 +19,9 @@ language: python
 matrix:
   include:
     - os: osx
-      osx_image: xcode9.4
-      python: 3.6
-      env: TOXENV=py36
+      osx_image: xcode10.3
+      python: 3.7
+      env: TOXENV=py37
     - os: linux
       python: 2.7
       dist: xenial  # Ubuntu 16.04
