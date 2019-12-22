@@ -20,20 +20,8 @@ matrix:
   include:
     - os: osx
       osx_image: xcode10.3
-      language: generic
-      env: TOXENV=py37
-      addons:
-        homebrew:
-          # update: true
-          packages: python3.7
-      before_install:
-        # - brew update && brew install git-lfs
-        - pip3 install virtualenv
-        - virtualenv -p python3 ~/venv
-        - source ~/venv/bin/activate
-      #before_script:
-      #  - git lfs install
-      #  - git lfs pull
+      python: 3.6
+      env: TOXENV=py36
     - os: linux
       python: 2.7
       dist: xenial  # Ubuntu 16.04
