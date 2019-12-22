@@ -21,7 +21,18 @@ matrix:
     - os: osx
       osx_image: xcode10.3
       env: TOXENV=py36
-      python: 3.6.8
+      addons:
+        homebrew:
+          # update: true
+          packages: python3.6.8
+      before_install:
+        # - brew update && brew install git-lfs
+        - pip3 install virtualenv
+        - virtualenv -p python3.6.8 ~/venv
+        - source ~/venv/bin/activate
+      #before_script:
+      #  - git lfs install
+      #  - git lfs pull
     - os: linux
       python: 2.7
       dist: xenial  # Ubuntu 16.04
